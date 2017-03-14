@@ -1,6 +1,10 @@
-#Goals: List of names, Pick one randomly, Delete each one as they're
-#picked
-#Reset the list, "trigger" button (2)
+#List of names [yes]
+#Pick one randomly [no]
+#Delete each one as they're picked [no]
+#Reset the list [no]
+#"Trigger" button [in progress]
+#Words on screen [almost done]
+
 import random
 
 #initiating pygame and font
@@ -20,11 +24,18 @@ hungrykids = ["Sophie", "Colton", "Julia", "Isaac", "Owen", "Rose",
 random.shuffle(hungrykids)
 print hungrykids
 
+def reset 
+def nextkid
+
 while True: 
     for event in pygame.event.get():
         keys = pygame.key.get_pressed()
-        if keys[27]:
+        if keys[K_ESCAPE]: 
             pygame.quit()
+        elif keys[K_r]:
+            reset()
+        elif keys[K_SPACE]:
+            nextkid()
     screen.fill(WHITE)
     myfont = pygame.font.SysFont("georgia", 18)
     intro = myfont.render("Snackerator 9000 TM", 1, (255, 0, 0))
@@ -33,3 +44,4 @@ while True:
     screen.blit(yourname, (100, 40))
     
     pygame.display.flip()
+#K_r K_SPACE
